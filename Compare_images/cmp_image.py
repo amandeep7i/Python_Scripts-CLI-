@@ -64,23 +64,25 @@ def main():
             if images1 == "cmp_image.py":
                 continue
             img1 = get_image(images1)
-            print(img1[0])
+            # print(img1[0])
             for images2 in os.listdir(folder_dir):
                 if(images1 == images2):
                     continue
                 if (images2.endswith(".png") or images2.endswith(".jpg") or images2.endswith(".jpeg")):
                 # display
                     img2 = get_image(images2)
-                    print(img2[0])
+                    # print(img2[0])
 
                     if np.array_equal(img1,img2):
                         print("Both the Images are same")
                         print("Image 1 :-",images1)
                         print("Image 2 :-",images2)
+                        print()
                     else:
                         print("Both the Images are different ...")
                         print("Image 1 :-",images1)
                         print("Image 2 :-",images2)
+                        print()
 
 if __name__ == "__main__":                 
     cprint(figlet_format("Compare   IMAGES!!"), "green", attrs=["bold"])
